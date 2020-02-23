@@ -27,7 +27,7 @@ public class Program {
 
     private void printMenu() throws SQLException {
         boolean running = true;
-        System.out.println("Welcome to Holidaymaker Travel Agent");
+        System.out.println("Welcome to Holidaymaker Travel Agency");
         System.out.println("---------------------------------------");
         while (running) {
             System.out.println("Please, select the menu:");
@@ -59,11 +59,10 @@ public class Program {
     }
 
     private void searchAndBookARoom() {
-        String checkIn = bookingInput.controlCheckInDate();
-        String checkOut = bookingInput.controlCheckOutDate();
+        String checkIn = bookingInput.CheckInDate();
+        String checkOut = bookingInput.CheckOutDate();
 
-        //Facilities
-        int numberOfGuests = bookingInput.controlNumberOfGuestsNotZero();
+        int numberOfGuests = bookingInput.numberOfGuests();
         System.out.println("Accommodation with swimming pool: Y/N ");
         String pool = scanner.nextLine();
         System.out.println("Accommodation with restaurant: Y/N ");
@@ -72,8 +71,6 @@ public class Program {
         String nightClub = scanner.nextLine();
         System.out.println("Accommodation with kids club: Y/N ");
         String kidsClub = scanner.nextLine();
-
-
 
         booking.searchAvailableRooms(numberOfGuests, pool, restaurant, nightClub, kidsClub, checkOut, checkIn);
         booking.printAvailableRooms();
