@@ -1,8 +1,11 @@
 package com.holidaymaker;
 
+import java.sql.SQLException;
+
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
 	// write your code here
+        new Program();
     }
 }
