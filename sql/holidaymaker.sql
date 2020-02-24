@@ -56,15 +56,15 @@ CREATE TABLE IF NOT EXISTS `bookings` (
   KEY `FK_bookings_rooms` (`room_id`),
   CONSTRAINT `FK_bookings_guests` FOREIGN KEY (`guest_id`) REFERENCES `guests` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `FK_bookings_rooms` FOREIGN KEY (`room_id`) REFERENCES `rooms` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 -- Dumping data for table holidaymaker.bookings: ~4 rows (approximately)
 /*!40000 ALTER TABLE `bookings` DISABLE KEYS */;
 INSERT INTO `bookings` (`id`, `guest_id`, `room_id`, `number_of_guests`, `check_in_date`, `check_out_date`, `total_price`) VALUES
-	(2, 4, 2, 1, '2020-06-24', '2020-06-25', 2500),
 	(3, 2, 4, 2, '2020-07-14', '2020-07-17', 36000),
 	(4, 1, 6, 1, '2020-06-01', '2020-06-04', 2100),
-	(5, 3, 3, 4, '2020-07-24', '2020-07-26', 7000);
+	(5, 3, 3, 4, '2020-07-24', '2020-07-26', 7000),
+	(6, 5, 7, 2, '2020-06-18', '2020-06-21', 6900);
 /*!40000 ALTER TABLE `bookings` ENABLE KEYS */;
 
 -- Dumping structure for table holidaymaker.guests
@@ -73,15 +73,16 @@ CREATE TABLE IF NOT EXISTS `guests` (
   `name` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
--- Dumping data for table holidaymaker.guests: ~4 rows (approximately)
+-- Dumping data for table holidaymaker.guests: ~5 rows (approximately)
 /*!40000 ALTER TABLE `guests` DISABLE KEYS */;
 INSERT INTO `guests` (`id`, `name`, `email`) VALUES
 	(1, 'Jane Doe', 'jane@gmail.com'),
 	(2, 'John Depp', 'john@me.com'),
 	(3, 'Filip', 'fille@gmail.com'),
-	(4, 'Ella', 'ella@mail.ru');
+	(4, 'Ella', 'ella@mail.ru'),
+	(5, 'Milena', 'mile@wow.com');
 /*!40000 ALTER TABLE `guests` ENABLE KEYS */;
 
 -- Dumping structure for table holidaymaker.rooms
