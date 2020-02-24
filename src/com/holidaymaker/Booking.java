@@ -11,7 +11,7 @@ public class Booking {
     private ResultSet resultSet;
 
     public Booking() {
-        connect();
+
     }
 
     private void connect() {

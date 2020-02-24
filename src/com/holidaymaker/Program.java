@@ -72,18 +72,18 @@ public class Program {
         System.out.println("Accommodation with kids club: Y/N ");
         String kidsClub = scanner.nextLine();
 
-        booking.searchAvailableRooms(numberOfGuests, pool, restaurant, nightClub, kidsClub, checkOut, checkIn);
-        booking.printAvailableRooms();
-        //sqlConsole.showAllUnbookedHotelRooms(numberOfGuests, pool, restaurant, nightClub, kidsClub);
-        //sqlConsole.printAvailableRooms();
+        //booking.searchAvailableRooms(numberOfGuests, pool, restaurant, nightClub, kidsClub, checkOut, checkIn);
+        //booking.printAvailableRooms();
 
-        //Create new method for booking section
+
         //Book - room
         System.out.println("Choose room number to book on chosen dates.");
         System.out.println("Room id: ");
         int roomId = Integer.parseInt(scanner.nextLine());
         System.out.println("Guest id: ");
         int guestId = Integer.parseInt(scanner.nextLine());
+        booking.bookRoom(guestId, roomId, numberOfGuests, checkIn, checkOut);
+        System.out.println(" ");
 
     }
 
