@@ -95,10 +95,10 @@ public class Booking {
 
     }
 
-    public void printAvailableRooms() {
+    public void printRooms() {
         try {
             while (resultSet.next()) {
-                String row = "Room id: " + resultSet.getString("room_id")
+                String row = "Room id: " + resultSet.getString("id")
                         + ", Accommodation: " + resultSet.getString("hotel_name")
                         + ", City: " + resultSet.getString("hotel_city")
                         + ", Room type: " + resultSet.getString("type")

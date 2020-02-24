@@ -73,7 +73,7 @@ public class Program {
         String kidsClub = scanner.nextLine();
 
         //booking.searchAvailableRooms(numberOfGuests, pool, restaurant, nightClub, kidsClub, checkOut, checkIn);
-        //booking.printAvailableRooms();
+        //booking.printRooms();
 
 
         //Book - room
