@@ -275,7 +275,7 @@ public class Program {
 
     private ResultSet getFacilities() {
         try {
-            statement = conn.prepareStatement("SELECT facilities.id, CONCAT('pool:', facilities.pool, ', restaurant:', facilities.restaurant, ', kids_club:', facilities.kids_club, ', night_club:', facilities.night_club) AS facilities_desc FROM facilities");
+            statement = conn.prepareStatement("SELECT facilities.id, CONCAT('pool:', facilities.pool, ', restaurant:', facilities.restaurant, ', kids club:', facilities.kids_club, ', night club:', facilities.night_club) AS facilities_desc FROM facilities");
             return statement.executeQuery();
         }
         catch(Exception e) {
